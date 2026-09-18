@@ -1,0 +1,20 @@
+ZAKON: Zakon o zaštiti potrošača
+ID: zakon-potrosaci
+JURISDIKCIJA: Republika Srbija
+
+
+ID: clan10_stav1
+TEKST: Trgovac je dužan da u ugostiteljskom objektu za pružanje usluga ishrane, pića i napitaka na stolovima istakne ili pre prijema porudžbine preda cenovnik u pisanoj formi svakom potrošaču, a na njegov zahtev i prilikom plaćanja.
+
+
+ID: clan40_stav1
+TEKST: Zabranjeno je slanje robe ili pružanje usluga potrošaču sa zahtevom za plaćanje robe ili usluga koje potrošač nije naručio.
+Ako se u slučaju iz stava 1. ovog člana, potrošač ne izjasni o robi koja je dostavljena ili usluzi koja je pružena, ne smatra se da je ponudu prihvatio.
+
+
+ID: clan40_stav4
+TEKST: Neće se smatrati slučajem iz stava 1. ovog člana ako trgovac:
+1) potrošaču umesto robe ili usluge, koju je naručio dostavi drugu robu ili pruži drugu uslugu iste cene i kvaliteta;
+2) obavesti potrošača da nije dužan da prihvati robu ili uslugu koju nije tražio ni da snosi troškove vraćanja robe trgovcu.
+
+

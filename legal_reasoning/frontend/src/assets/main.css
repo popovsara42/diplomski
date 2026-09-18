@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: white;
+}
+
+body {
+  min-width: 0;
+  min-height: 100vh;
+  background: white;
+  color: #141414;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+}

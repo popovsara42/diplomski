@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca"
+         xmlns="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca"/>
+
+<owl:ObjectProperty rdf:about="#jeNarucilacPorudzbine">
+  <rdfs:domain rdf:resource="#Postrosac"/>
+  <rdfs:range rdf:resource="#Porudzbina"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#jeObavestio">
+  <rdfs:domain rdf:resource="#PravniSubjekat"/>
+  <rdfs:range rdf:resource="#PravniSubjekat"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#jePosaljilacIsporuke">
+  <rdfs:domain rdf:resource="#Trgovac"/>
+  <rdfs:range rdf:resource="#Isporuka"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#jePrimalacIsporuke">
+  <rdfs:domain rdf:resource="#Postrosac"/>
+  <rdfs:range rdf:resource="#Isporuka"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#obavljaDelatnost">
+  <rdfs:domain rdf:resource="#Trgovac"/>
+  <rdfs:range rdf:resource="#MestoPruzanjaUsluga"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#odnosiSeNaProizvod">
+  <rdfs:domain rdf:resource="#Dogadjaj"/>
+  <rdfs:range rdf:resource="#Proizvod"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#posaljilacObavestenja">
+  <rdfs:domain rdf:resource="#Obavestenje"/>
+  <rdfs:range rdf:resource="#PravniSubjekat"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preuzimaTrosak">
+  <rdfs:domain rdf:resource="#PravniSubjekat"/>
+  <rdfs:range rdf:resource="#Trosak"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#primalacObavestenja">
+  <rdfs:domain rdf:resource="#Obavestenje"/>
+  <rdfs:range rdf:resource="#PravniSubjekat"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#seNarucujeOd">
+  <rdfs:domain rdf:resource="#Porudzbina"/>
+  <rdfs:range rdf:resource="#Trgovac"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#zahtevaPlacanjeOd">
+  <rdfs:domain rdf:resource="#Trgovac"/>
+  <rdfs:range rdf:resource="#Postrosac"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#datumObavestenja">
+  <rdfs:domain rdf:resource="#Obavestenje"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#jasnoIsticeCenovnik">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#MestoPruzanjaUsluga"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Postrosac">
+  <rdfs:subClassOf rdf:resource="#PravniSubjekat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Porudzbina">
+  <rdfs:subClassOf rdf:resource="#Dogadjaj"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PravniSubjekat"/>
+
+<owl:Class rdf:about="#Trgovac">
+  <rdfs:subClassOf rdf:resource="#PravniSubjekat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Isporuka">
+  <rdfs:subClassOf rdf:resource="#Dogadjaj"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MestoPruzanjaUsluga"/>
+
+<owl:Class rdf:about="#Dogadjaj"/>
+
+<owl:Class rdf:about="#Proizvod"/>
+
+<owl:Class rdf:about="#Obavestenje"/>
+
+<owl:Class rdf:about="#Trosak"/>
+
+<owl:Class rdf:about="#BenzinskaStanica">
+  <rdfs:subClassOf rdf:resource="#MestoPruzanjaUsluga"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DigitalniSadrzaj">
+  <rdfs:subClassOf rdf:resource="#Proizvod"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Roba">
+  <rdfs:subClassOf rdf:resource="#Proizvod"/>
+</owl:Class>
+
+<owl:Class rdf:about="#UgostiteljskiObjekat">
+  <rdfs:subClassOf rdf:resource="#MestoPruzanjaUsluga"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Usluga">
+  <rdfs:subClassOf rdf:resource="#Proizvod"/>
+</owl:Class>
+
+<owl:Class rdf:about="#UslugaCentralnoGrejanje">
+  <rdfs:subClassOf rdf:resource="#MestoPruzanjaUsluga"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#mile">
+  <rdf:type rdf:resource="#Trgovac"/>
+  <obavljaDelatnost rdf:resource="#kd_mileta"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#kd_mileta">
+  <rdf:type rdf:resource="#UgostiteljskiObjekat"/>
+</owl:NamedIndividual>
+
+<Trgovac rdf:about="#????"/>
+
+
+</rdf:RDF>

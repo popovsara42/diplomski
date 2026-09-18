@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lrml:LegalRuleML
+    xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/"
+    xmlns:ruleml="http://ruleml.org/spec"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://docs.oasis-open.org/legalruleml/ns/v1.0/
+        http://docs.oasis-open.org/legalruleml/legalruleml-core-spec/v1.0/os/xsd/compact/lrml-compact.xsd">
+
+    <lrml:LegalReferences>
+
+        <lrml:LegalReference
+            refersTo="ref_zzp"
+            refID="Zakon-o-zastiti-potrosaca"
+            refIDSystemName="RS"/>
+
+        <lrml:LegalReference
+            refersTo="ref_clan10"
+            refID="clan10"
+            refIDSystemName="Zakon-o-zastiti-potrosaca"/>
+        <lrml:LegalReference
+            refersTo="ref_clan10_stav1"
+            refID="clan10_stav1"
+            refIDSystemName="Zakon-o-zastiti-potrosaca"/>
+        <lrml:LegalReference
+            refersTo="ref_clan209"
+            refID="clan209"
+            refIDSystemName="Zakon-o-zastiti-potrosaca"/>
+
+    </lrml:LegalReferences>
+
+
+    <lrml:Associations>
+        <lrml:Association>
+            <lrml:appliesSource keyref="#ref_clan10_stav1"/>
+            <lrml:toTarget keyref="#ps10_stav1"/>
+        </lrml:Association>
+    </lrml:Associations>
+
+    <lrml:Statements>
+        <lrml:PrescriptiveStatement key="ps10_stav1">
+
+            <ruleml:Rule
+                key="rule_clan10_stav1"
+                closure="universal">
+                <ruleml:if>
+                    <ruleml:And>                    
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca#Trgovac"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca#UgostiteljskiObjekat"/>
+                            <ruleml:Var>Y</ruleml:Var>
+                        </ruleml:Atom>
+
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca#obavljaDelatnost"/>
+                            <ruleml:Var>X</ruleml:Var>
+                            <ruleml:Var>Y</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+
+                <ruleml:then>
+                    <lrml:Obligation key="oblig10_stav1">
+                        <ruleml:slot>
+                            <lrml:Bearer
+                                iri="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca#UgostiteljskiObjekat"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:slot>
+
+                        <ruleml:Atom>
+                            <ruleml:Rel
+                                iri="http://www.semanticweb.org/lenovo/ontologies/2026/8/zastitaPotrosaca#jasnoIsticeCenovnik"/>
+                            <ruleml:Var>Y</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="ps40_stav1">
+            <ruleml:Rule key="rule_clan40_stav1" closure="universal">
+
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="http://example.org/legal#Isporuka"/>
+                            <ruleml:Var>I</ruleml:Var>
+                        </ruleml:Atom>
+
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="http://example.org/legal#jePosaljilacIsporuke"/>
+                            <ruleml:Var>T</ruleml:Var>
+                            <ruleml:Var>I</ruleml:Var>
+                        </ruleml:Atom>
+
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="http://example.org/legal#jePrimalacIsporuke"/>
+                            <ruleml:Var>P</ruleml:Var>
+                            <ruleml:Var>I</ruleml:Var>
+                        </ruleml:Atom>
+
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="http://example.org/legal#odnosiSeNaProizvod"/>
+                            <ruleml:Var>I</ruleml:Var>
+                            <ruleml:Var>Y</ruleml:Var>
+                        </ruleml:Atom>
+
+                        
+                        
+                                <ruleml:Atom>
+                                    <ruleml:Rel iri="http://example.org/legal#Porudzbina"/>
+                                    <ruleml:Var>X</ruleml:Var>
+                                </ruleml:Atom> 
+                                <ruleml:Atom>
+                                    <ruleml:Rel iri="http://example.org/legal#jeNarucilacPorudzbine"/>
+                                    <ruleml:Var>P</ruleml:Var>
+                                    <ruleml:Var>X</ruleml:Var>
+                                </ruleml:Atom>
+                                <ruleml:Atom>
+                                    <ruleml:Rel iri="http://example.org/legal#seNarucujeOd"/>
+                                    <ruleml:Var>X</ruleml:Var>
+                                    <ruleml:Var>T</ruleml:Var>
+                                </ruleml:Atom> 
+                                <ruleml:Negation>
+                                    <ruleml:Atom>
+                                        <ruleml:Rel iri="http://example.org/legal#odnosiSeNaProizvod"/>
+                                        <ruleml:Var>X</ruleml:Var>
+                                        <ruleml:Var>Y</ruleml:Var>
+                                    </ruleml:Atom>
+                                </ruleml:Negation>
+                    </ruleml:And>
+                </ruleml:if>
+
+                <ruleml:then>
+                    <lrml:Obligation key="oblig40_stav1">
+                        <ruleml:Negation>
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#zahtevaPlacanjeOd"/>
+                                <ruleml:Var>T</ruleml:Var>
+                                <ruleml:Var>P</ruleml:Var>
+                            </ruleml:Atom>
+                        </ruleml:Negation>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="ps40_stav4">
+                <ruleml:Rule key="rule_clan40_stav4" closure="universal">
+
+                    <lrml:hasStrength>
+                        <lrml:Defeater key="str40_stav4"/>
+                    </lrml:hasStrength>
+
+                    <ruleml:if>
+                        <ruleml:And>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#Isporuka"/>
+                                <ruleml:Var>I</ruleml:Var>
+                            </ruleml:Atom>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#jePosaljilacIsporuke"/>
+                                <ruleml:Var>T</ruleml:Var>
+                                <ruleml:Var>I</ruleml:Var>
+                            </ruleml:Atom>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#jePrimalacIsporuke"/>
+                                <ruleml:Var>P</ruleml:Var>
+                                <ruleml:Var>I</ruleml:Var>
+                            </ruleml:Atom>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#odnosiSeNaProizvod"/>
+                                <ruleml:Var>I</ruleml:Var>
+                                <ruleml:Var>Y</ruleml:Var>
+                            </ruleml:Atom>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#Porudzbina"/>
+                                <ruleml:Var>X</ruleml:Var>
+                            </ruleml:Atom>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#jeNarucilacPorudzbine"/>
+                                <ruleml:Var>P</ruleml:Var>
+                                <ruleml:Var>X</ruleml:Var>
+                            </ruleml:Atom>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#seNarucujeOd"/>
+                                <ruleml:Var>X</ruleml:Var>
+                                <ruleml:Var>T</ruleml:Var>
+                            </ruleml:Atom>
+
+                            <ruleml:Negation>
+                                <ruleml:Atom>
+                                    <ruleml:Rel iri="http://example.org/legal#odnosiSeNaProizvod"/>
+                                    <ruleml:Var>X</ruleml:Var>
+                                    <ruleml:Var>Y</ruleml:Var>
+                                </ruleml:Atom>
+                            </ruleml:Negation>
+
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#jeObavestio"/>
+                                <ruleml:Var>T</ruleml:Var>
+                                <ruleml:Var>P</ruleml:Var>
+                            </ruleml:Atom>
+
+                        </ruleml:And>
+                    </ruleml:if>
+
+                    <ruleml:then>
+                        <lrml:Obligation key="oblig40_stav4">
+                            <ruleml:Atom>
+                                <ruleml:Rel iri="http://example.org/legal#zahtevaPlacanjeOd"/>
+                                <ruleml:Var>T</ruleml:Var>
+                                <ruleml:Var>P</ruleml:Var>
+                            </ruleml:Atom>
+                        </lrml:Obligation>
+                    </ruleml:then>
+                </ruleml:Rule>
+            </lrml:PrescriptiveStatement>
+
+
+            <lrml:Override
+                over="rule_clan40_stav4"
+                under="rule_clan40_stav1"/>
+
+                
+                <lrml:PenaltyStatement key="penalty_clan209">
+                    <lrml:SuborderList>
+                        <lrml:Obligation key="fine_category_1">
+
+                            <ruleml:Atom>
+                                <ruleml:Rel
+                                    iri="http://example.org/legal#novcanaKazna"/>
+                                <ruleml:Var>X</ruleml:Var>
+
+                                <ruleml:slot>
+                                    <ruleml:Ind iri="http://example.org/legal#minKazna">
+                                        300000
+                                    </ruleml:Ind>
+                                </ruleml:slot>
+
+                                <ruleml:slot>
+                                    <ruleml:Ind iri="http://example.org/legal#maxKazna">
+                                        2000000
+                                    </ruleml:Ind>
+                                </ruleml:slot>
+                            </ruleml:Atom>
+                        </lrml:Obligation>
+                    </lrml:SuborderList>
+                </lrml:PenaltyStatement>
+
+
+        <lrml:PenaltyStatement key="penalty_clan210">
+            <lrml:SuborderList>
+                <lrml:Obligation key="fine_category_2">
+                    <ruleml:slot>
+                        <lrml:Bearer
+                            iri="http://example.org/legal#KazneniOrgan"/>
+                        <ruleml:Var>Y</ruleml:Var>
+                    </ruleml:slot>
+                    <ruleml:Atom>
+                        <ruleml:Rel
+                            iri="http://example.org/legal#payFine"/>
+                        <ruleml:Var>X</ruleml:Var>
+                       <ruleml:slot>
+                            <ruleml:Ind
+                                iri="http://example.org/legal#amount">
+                                200000
+                            </ruleml:Ind>
+                        </ruleml:slot>
+                    </ruleml:Atom>
+                </lrml:Obligation>
+            </lrml:SuborderList>
+        </lrml:PenaltyStatement>
+
+
+        <lrml:ReparationStatement key="rep_category_1">
+            <lrml:Reparation key="rep10">
+                <lrml:appliesPenalty keyref="#penalty_clan209"/>
+                <lrml:toPrescriptiveStatement keyref="#ps10_stav1"/>
+            </lrml:Reparation>
+
+            <lrml:Reparation key="rep11">
+                <lrml:appliesPenalty keyref="#penalty_clan210"/>
+                <lrml:toPrescriptiveStatement keyref="#ps40_stav1"/>
+            </lrml:Reparation>
+        </lrml:ReparationStatement>
+    </lrml:Statements>
+</lrml:LegalRuleML>
